@@ -7,26 +7,56 @@ import java.util.Scanner;
  */
 public class Console {
 
+    private static final Scanner scanner = new Scanner(System.in);
+
     public static void print(String output, Object... args) {
         System.out.printf(output, args);
     }
 
+    
+
+    
+
     public static void println(String output, Object... args) {
-        print(output + "\n", args);
+        System.out.printf(output + "\n", args);
     }
 
     public static String getStringInput(String prompt) {
-        Scanner scanner = new Scanner(System.in);
         println(prompt);
-        String userInput = scanner.nextLine();
+        return scanner.nextLine();
+
+        
+
+        
+
+        
+        
+    }
+    
+
+    public static Integer getIntegerInput(String prompt) {
+        println(prompt);
+        Scanner scanner = new Scanner(System.in);
+        Integer userInput = scanner.nextInt();
         return userInput;
     }
 
-    public static Integer getIntegerInput(String prompt) {
-        return null;
+    public static Double getDoubleInput(String prompt) {
+        println(prompt);
+        while (!scanner.hasNextDouble()) {
+            println("Invalid input. Please enter a double.");
+            scanner.next(); // Consume the invalid input
+        }
+        double userInput = scanner.nextDouble();
+        scanner.nextLine(); // Consume the newline character
+        return userInput;
+        
+    }
+    
+        
+        
+        
     }
 
-    public static Double getDoubleInput(String prompt) {
-        return null;
-    }
-}
+
+
