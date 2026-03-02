@@ -40,4 +40,24 @@ public class TestMainApplication {
     }
 
 
-}
+import java.util.Scanner;
+
+public class SquareRootCalculator {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("=== Square Root Calculator (√x) ===")
+    }   System.out.print("Enter a number: ");
+
+        double number = scanner.nextDouble();
+
+        if (number < 0) {
+            System.out.println('Error: Cannot calculate square root of a negative number.");
+        } else {
+            double result = Math.sqrt(number);
+        System.out.println("Square root of " + number + " is: " + result);
+        }
+        scanner.close();
+    
+    
