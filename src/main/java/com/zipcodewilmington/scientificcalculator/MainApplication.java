@@ -75,7 +75,7 @@ public class MainApplication {
                     case "tan":
                         result = ScientificFeatures.tangent(n1);
                         break;
-            
+                    
                     default:
                         Console.println("Invalid operator");
                         break;

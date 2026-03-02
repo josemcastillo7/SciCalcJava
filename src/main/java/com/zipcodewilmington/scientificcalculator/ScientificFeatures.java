@@ -36,10 +36,13 @@ public class ScientificFeatures {
         return result;
     }
 
-    
+    public static double exponent(double a, double b) {
+        double result = Math.pow(a,b);
+        System.out.println(result);
+        return result;
+    }
 
-
-    //meory method 
+    //memory method 
 
 //square root: √ options + v 
 // logarithm: log 
