@@ -40,7 +40,7 @@ public class MainApplication {
 
         while(running){
             Console.println("Current value: %s", currentValue);
-            String operator = Console.getStringInput("Enter an operator (+, -, *, /) , enter scientific : sqrt, log, sin, cos, tan, or 'exit' to quit:");
+            String operator = Console.getStringInput("Enter an operator (+, -, *, /) , enter scientific : sqrt, log, sin, cos, square, tan, or 'exit' to quit:");
             if (operator.equals("exit")) {
                 running = false;
             } else {
@@ -74,6 +74,9 @@ public class MainApplication {
                         break;
                     case "tan":
                         result = ScientificFeatures.tangent(n1);
+                        break;
+                        case "squre":
+                        result = ScientificFeatures.exponent(n1, n2);
                         break;
                     
                     default:
