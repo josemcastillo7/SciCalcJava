@@ -1,5 +1,9 @@
 package com.zipcodewilmington.scientificcalculator;
 
+
+
+
+
 /**
  * Created by leon on 2/9/18.
  */
@@ -30,9 +34,13 @@ public class MainApplication {
         double currentValue = 0;
         boolean running = true; 
 
+        
+
+        
+
         while(running){
             Console.println("Current value: %s", currentValue);
-            String operator = Console.getStringInput("Enter an operator (+, -, *, /) or 'exit' to quit:");
+            String operator = Console.getStringInput("Enter an operator (+, -, *, /) , enter scientific : sqrt, log, sin, cos, tan, or 'exit' to quit:");
             if (operator.equals("exit")) {
                 running = false;
             } else {
@@ -52,59 +60,37 @@ public class MainApplication {
                     case "/":
                         result = divide(n1, n2);
                         break;
+                    case "sqrt":
+                        result = ScientificFeatures.squareRoot(n1);
+                        break;
+                    case "log":
+                        result = ScientificFeatures.logarithm(n1);
+                        break;
+                    case "sin":
+                        result = ScientificFeatures.sine(n1);
+                        break;
+                    case "cos":
+                        result = ScientificFeatures.cosine(n1);
+                        break;
+                    case "tan":
+                        result = ScientificFeatures.tangent(n1);
+                        break;
+            
                     default:
                         Console.println("Invalid operator");
-                        return;
-                }
+                        break;
+
+                    }
+                
+               
+
+                
                 currentValue = result;
             }
         }
-
-        
-        Console.println("Welcome to my calculator!");
-
-        double n1 = Console.getDoubleInput("Enter a number");
-        String operator = Console.getStringInput("Enter an operator (+, -, *, /)");
-        double n2 = Console.getDoubleInput("Enter another number"); 
-
-        double result =0;
-        switch (operator) {
-            case "+":
-                result = add((int)n1, (int)n2);
-                break;
-            case "-":
-                result = subtract((int)n1, (int)n2);
-                break;
-            case "*":
-                result = multiply(n1, n2);
-                break;
-            case "/":
-                result = divide(n1, n2);
-                break;
-            default:
-                Console.println("Invalid operator");
-                return;
-        }
-        //String s = Console.getStringInput("Enter a string");
-        //Integer i = Console.getIntegerInput("Enter an integer");
-       // Double d = Console.getDoubleInput("Enter a double.");
-
-        Console.println("The result of %s %s %s is %s", n1, operator, n2, result);
-        
-
-        
-
-        
-
-
-
-        
-          
-
-        
-
-        //Console.println("The user input %s as a string", s);
-       // Console.println("The user input %s as a integer", i);
-       // Console.println("The user input %s as a d", d);
     }
 }
+
+        
+    
+

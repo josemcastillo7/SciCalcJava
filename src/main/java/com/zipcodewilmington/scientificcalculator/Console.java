@@ -50,6 +50,8 @@ public class Console {
         double userInput = scanner.nextDouble();
         scanner.nextLine(); // Consume the newline character
         return userInput;
+
+        
         
     }
     
